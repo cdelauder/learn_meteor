@@ -6,8 +6,9 @@ if (Meteor.isClient) {
   Template.hello.events({
     'click input': function () {
       // template data, if any, is available in 'this'
+      console.log(typeof console)
       if (typeof console !== 'undefined')
-        console.log("You pressed the button");
+        $('body').text("You pressed the button");
     }
   });
 }
